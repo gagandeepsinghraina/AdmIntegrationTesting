@@ -10,15 +10,15 @@ env:
    - version
 steps:
   - type: VulnerabilityAudit        # required
-    name: "Vulnerability Audit Step" # optional 
+  #  name: "Vulnerability Audit Step" # optional 
     configuration:                   # required
       buildType: maven               # required
       pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml # required (Supports parameter substitution)
-      maxPermissibleCvssV2Score: 9.8                # optional (defaults to 0.0)
-      maxPermissibleCvssV3Score: 9.8                # optional (defaults to 0.0)
+   #   maxPermissibleCvssV2Score: 9.8                # optional (defaults to 0.0)
+   #   maxPermissibleCvssV3Score: 9.8                # optional (defaults to 0.0)
     knowledgeBaseId: ocid1.admknowledgebase.oc1.iad.amaaaaaa4725fbqa44p5um3hqnqhq3ja4pcijprymc6yf66zbkzne25p22na # required (Supports parameter substitution)
-    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaamimegz6vbad3of5blhrgezxn35d5hrkqyd65ucz47pizitb4elja # optional (Supports parameter substitution) defaults to KB compartmentId
-    vulnerabilityAuditName: deepReport  # optional (Supports parameter substitution), name will be auto generated.
+   # vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaamimegz6vbad3of5blhrgezxn35d5hrkqyd65ucz47pizitb4elja # optional (Supports parameter substitution) defaults to KB compartmentId
+  #  vulnerabilityAuditName: deepReport  # optional (Supports parameter substitution), name will be auto generated.
   - type: Command
     name: "See maven repo before build"
     command: |
