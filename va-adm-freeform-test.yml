@@ -19,7 +19,7 @@ steps:
     vulnerabilityAuditName: GaganSuccessReport  # optional (Supports parameter substitution), name will be auto generated.
     freeFormTags:
       key: value
-      key1: value1
+      key2: value2
   - type: Command
     name: "See maven repo before build"
     command: |
