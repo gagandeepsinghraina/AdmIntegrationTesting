@@ -15,7 +15,7 @@ steps:
       maxPermissibleCvssV2Score: 10.0                # optional (defaults to 0.0)
       maxPermissibleCvssV3Score: 10.0                # optional (defaults to 0.0)
     knowledgeBaseId: ocid1.admknowledgebase.oc1.phx.amaaaaaab6fywtya27zz6hb6wzn5rcjvwo6f5jo22zym76msxcypndch5pfa # required (Supports parameter substitution)
-    #vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaanho2cjnpfhju3xpllqm5pyrpx4dj3r74gb5c74p362nshkw5dbqq # optional (Supports parameter substitution) defaults to KB compartmentId
+    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaaiglmbwo3raoecqras722lxwpcgkb7gu3jhisa3iagind3fkoxpmq # optional (Supports parameter substitution) defaults to KB compartmentId
     vulnerabilityAuditName: GaganSuccessReport  # optional (Supports parameter substitution), name will be auto generated.
     freeFormTags:
       key: value
