@@ -1,0 +1,40 @@
+version: 0.1
+component: build
+timeoutInSeconds: 20000
+runAs: root
+shell: bash
+env:
+  exportedVariables:
+   - version
+steps:
+  - type: VulnerabilityAudit        # required
+    name: "Vulnerability Audit Step" # optional 
+    configuration:                   # required
+      buildType: maven               # required
+      pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml # required (Supports parameter substitution)
+      maxPermissibleCvssV2Score: 10.0                # optional (defaults to 0.0)
+      maxPermissibleCvssV3Score: 10.0                # optional (defaults to 0.0)
+    knowledgeBaseId: ocid1.admknowledgebase.oc1.phx.amaaaaaab6fywtya27zz6hb6wzn5rcjvwo6f5jo22zym76msxcypndch5pfa # required (Supports parameter substitution)
+    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaaiglmbwo3raoecqras722lxwpcgkb7gu3jhisa3iagind3fkoxpmq # optional (Supports parameter substitution) defaults to KB compartmentId
+    vulnerabilityAuditName: GaganSuccessReport  # optional (Supports parameter substitution), name will be auto generated.
+    freeFormTags:
+      key: value
+      key1:      
+      key2: value2
+  - type: Command
+    name: "See maven repo before build"
+    command: |
+      ls -lart /root/.m2/repository
+      echo "hello world"
+  - type: Command
+    name: "building the code"
+    command: |
+      mvn clean install
+  - type: Command
+    name: "viewing after build"
+    command: |
+      ls -lart /root/.m2/repository
+#   - type: Command
+#     name: "building the code second time"
+#     command: |
+#       mvn clean install
