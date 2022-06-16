@@ -16,9 +16,9 @@ steps:
       pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml # required (Supports parameter substitution)
       maxPermissibleCvssV2Score: 10.0                # optional (defaults to 0.0)
       maxPermissibleCvssV3Score: 10.0                # optional (defaults to 0.0)
-    knowledgeBaseId: ocid1.admknowledgebase.oc1.iad.amaaaaaa4725fbqawhps377rxplobl7yc3kbpdrtdanlpo44ldob5722hjza # required (Supports parameter substitution)
-    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaamimegz6vbad3of5blhrgezxn35d5hrkqyd65ucz47pizitb4elja # optional (Supports parameter substitution) defaults to KB compartmentId
-    vulnerabilityAuditName: bhaveshReport.  # optional (Supports parameter substitution), name will be auto generated.
+    knowledgeBaseId: ocid1.admknowledgebase.oc1.phx.amaaaaaab6fywtya27zz6hb6wzn5rcjvwo6f5jo22zym76msxcypndch5pfa # required (Supports parameter substitution)
+    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaaiglmbwo3raoecqras722lxwpcgkb7gu3jhisa3iagind3fkoxpmq # optional (Supports parameter substitution) defaults to KB compartmentId
+    vulnerabilityAuditName: GaganSuccessReport  # optional (Supports parameter substitution), name will be auto generated.
   - type: Command
     name: "See maven repo before build"
     command: |
